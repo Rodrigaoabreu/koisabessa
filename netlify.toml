@@ -1,0 +1,39 @@
+"$schema" = "https://open-api.netlify.com/netlify.schema.json"
+
+[build]
+  base = "."
+  command = "npm run build"
+  publish = "frontend/dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[[redirects]]
+  from = "/v1/*"
+  to = "https://koisabessa-api.ncm4mx.easypanel.host/v1/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/media/*"
+  to = "https://koisabessa-api.ncm4mx.easypanel.host/media/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/docs"
+  to = "/docs/"
+  status = 301
+
+[[redirects]]
+  from = "/docs/*"
+  to = "https://koisabessa-api.ncm4mx.easypanel.host/docs/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/health"
+  to = "https://koisabessa-api.ncm4mx.easypanel.host/health"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

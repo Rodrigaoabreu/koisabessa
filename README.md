@@ -74,6 +74,12 @@ Consulte o [contrato OpenAPI](specs/001-loja-koisabessa/contracts/openapi.json) 
 - Para verificar o rollback em uma base dedicada, rode `npm run db:rollback` e depois `npm run db:migrate`.
 - Para a loja, use a base de demonstração com seed, rode `npx playwright install chromium` e `npm run test:e2e`. Os testes abrem o projeto se ele estiver parado. O build de produção é verificado com `npm run build`.
 
+## Deploy
+
+O [site no Netlify](https://koisabessa-web.netlify.app/) serve o build do front-end. O `netlify.toml` encaminha as rotas da API, das fotos e do Swagger para o Express no EasyPanel.
+
+O `compose.production.yaml` inicia o Express e um MySQL 8.4 na mesma rede privada, com volumes para os dados e os uploads. Configure `MYSQL_PASSWORD`, `MYSQL_ROOT_PASSWORD` e `JWT_SECRET` no ambiente do serviço. A API aguarda o MySQL, aplica a migração e popula os 16 produtos antes de começar a atender. No EasyPanel, associe o domínio HTTPS da API ao serviço `api`, porta `3001`.
+
 ## Especificação e imagens
 
 A [especificação](specs/001-loja-koisabessa/spec.md), o plano e as tarefas seguem o GitHub Spec Kit 1.4.3. As skills Ponytail e [Unslop, de Damir Sokolovsky](https://github.com/heydamir/unslop), estão disponíveis localmente em `.agents/skills/`.

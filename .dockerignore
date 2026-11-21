@@ -1,0 +1,16 @@
+*
+!package.json
+!package-lock.json
+!backend/
+!backend/**
+backend/.env*
+backend/node_modules/
+backend/storage/
+backend/coverage/
+backend/tests/
+!frontend/
+!frontend/package.json
+!specs/
+!specs/001-loja-koisabessa/
+!specs/001-loja-koisabessa/contracts/
+!specs/001-loja-koisabessa/contracts/openapi.json
