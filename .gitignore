@@ -8,4 +8,7 @@ playwright-report/
 test-results/
 backend/storage/
 .koisabessa-local/
+/.agents/
+/.specify/
+/specs/001-loja-koisabessa/
 *.log

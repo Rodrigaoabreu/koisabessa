@@ -10,7 +10,3 @@ backend/coverage/
 backend/tests/
 !frontend/
 !frontend/package.json
-!specs/
-!specs/001-loja-koisabessa/
-!specs/001-loja-koisabessa/contracts/
-!specs/001-loja-koisabessa/contracts/openapi.json

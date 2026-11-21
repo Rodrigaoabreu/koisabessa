@@ -98,7 +98,7 @@ function Footer() {
           { text: 'Sobre a loja', link: '/sobre' },
         ]} />
       </div>
-      <hr /><p className="copyright">© {new Date().getFullYear()} Koisabessa · Projeto acadêmico Digital College</p>
+      <hr /><p className="copyright">© {new Date().getFullYear()} Koisabessa · Projeto do Geração Tech 4.0</p>
     </div>
   </footer>;
 }

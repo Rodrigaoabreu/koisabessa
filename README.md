@@ -1,6 +1,8 @@
 # Koisabessa
 
-Loja demonstrativa de móveis, decoração e utilidades para casa. Projeto final de front-end e back-end da Digital College, desenvolvido por **Rodrigo Sousa**.
+Loja demonstrativa de móveis, decoração e utilidades para casa. Projeto final de front-end e back-end do **Geração Tech 4.0**, desenvolvido por **Rodrigo Sousa**.
+
+[Loja publicada](https://koisabessa-web.netlify.app/) · [Documentação da API](https://koisabessa-web.netlify.app/docs/)
 
 ## O que a loja faz
 
@@ -66,7 +68,7 @@ As imagens do seed são servidas por `/media/catalog`. A API aceita URLs HTTP(S)
 
 O código `401` segue as seções de cada rota para token ausente ou inválido. Permissão insuficiente retorna `403`. Cadastro e login são públicos, com limite de tentativas. A sessão da interface termina ao recarregar a página ou sair da conta. O carrinho persiste independentemente da sessão.
 
-Consulte o [contrato OpenAPI](specs/001-loja-koisabessa/contracts/openapi.json) e os enunciados oficiais de [front-end](https://github.com/digitalcollegebr/projeto-digital-store) e [back-end](https://github.com/digitalcollegebr/projeto-backend).
+O [contrato OpenAPI](backend/docs/openapi.json) descreve as rotas e os formatos de resposta.
 
 ## Verificar a entrega
 
@@ -80,8 +82,6 @@ O [site no Netlify](https://koisabessa-web.netlify.app/) serve o build do front-
 
 O `compose.production.yaml` inicia o Express e um MySQL 8.4 na mesma rede privada, com volumes para os dados e os uploads. Configure `MYSQL_PASSWORD`, `MYSQL_ROOT_PASSWORD` e `JWT_SECRET` no ambiente do serviço. A API aguarda o MySQL, aplica a migração e popula os 16 produtos antes de começar a atender. No EasyPanel, associe o domínio HTTPS da API ao serviço `api`, porta `3001`.
 
-## Especificação e imagens
+## Referências da atividade
 
-A [especificação](specs/001-loja-koisabessa/spec.md), o plano e as tarefas seguem o GitHub Spec Kit 1.4.3. As skills Ponytail e [Unslop, de Damir Sokolovsky](https://github.com/heydamir/unslop), estão disponíveis localmente em `.agents/skills/`.
-
-As imagens de demonstração foram geradas com a ferramenta ImageGen integrada. A direção de arte, a revisão Unslop e os prompts finais estão na [especificação visual](specs/001-loja-koisabessa/visual.md). Os arquivos usados pela loja estão em [ambientes](frontend/public/ambientes) e [fotos do catálogo](backend/catalog-media).
+Os materiais indicados na atividade serviram de referência para as telas e para a API. [Front-end](https://github.com/digitalcollegebr/projeto-digital-store) · [Back-end](https://github.com/digitalcollegebr/projeto-backend)

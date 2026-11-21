@@ -44,7 +44,7 @@ function App() {
         <Route path="/products" element={<CatalogAlias />} />
         <Route path="/product/:id" element={<ProductViewPage cart={cart} openCart={() => setCartOpen(true)} />} />
         <Route path="/meus-pedidos" element={<SimplePage title="Meus pedidos" copy="A Koisabessa é uma loja demonstrativa. Você pode salvar produtos no carrinho durante a visita." />} />
-        <Route path="/sobre" element={<SimplePage title="Sobre a Koisabessa" copy="Koisabessa é uma loja demonstrativa de móveis e artigos para casa, desenvolvida por Rodrigo Sousa para o projeto final da Digital College." />} />
+        <Route path="/sobre" element={<SimplePage title="Sobre a Koisabessa" copy="A Koisabessa é uma loja demonstrativa de móveis e artigos para casa. Rodrigo Sousa desenvolveu o projeto como trabalho final do curso Geração Tech 4.0." />} />
         <Route path="*" element={<SimplePage title="Página não encontrada" copy="Volte ao catálogo para continuar explorando a loja." />} />
       </Routes>
     </Layout>

@@ -1,7 +1,7 @@
 const path = require("node:path");
 const express = require("express");
 const swagger = require("swagger-ui-express");
-const openapi = require("../../specs/001-loja-koisabessa/contracts/openapi.json");
+const openapi = require("../docs/openapi.json");
 const { auth } = require("./middleware/auth");
 const { userRoutes } = require("./routes/users");
 const { categoryRoutes } = require("./routes/categories");
